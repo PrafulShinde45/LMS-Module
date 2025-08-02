@@ -1,0 +1,98 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+}
+
+.main-content {
+  padding: var(--space-2xl) 0;
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.courses-header h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.courses-header p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+}
+
+.empty-state h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--space-xl) 0;
+  }
+  
+  .courses-header h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .courses-header p {
+    font-size: var(--font-size-base);
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .empty-state {
+    padding: var(--space-xl);
+  }
+  
+  .empty-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .courses-header p {
+    font-size: var(--font-size-sm);
+  }
+} 
