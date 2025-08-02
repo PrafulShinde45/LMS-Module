@@ -1,6 +1,9 @@
 # Learning Management System (LMS)
 
 A full-stack course listing and student enrollment module built with React.js, Node.js, Express.js, and MongoDB.
+## 🔗 Live Demo
+
+**🌐 [View Live Application](https://lms-module.up.railway.app/)**
 
 ## Features
 
