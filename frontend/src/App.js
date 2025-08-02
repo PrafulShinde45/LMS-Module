@@ -142,7 +142,7 @@ function App() {
     };
 
     initializeData();
-  }, []);
+  }, [fetchCourses, fetchEnrollments]);
 
   // Clear error after 5 seconds
   useEffect(() => {
