@@ -144,7 +144,7 @@ function App() {
     initializeData();
   }, [fetchCourses, fetchEnrollments]);
 
-  // Clear error after 5 seconds
+  // Clear error after 5 second
   useEffect(() => {
     if (error) {
       const timer = setTimeout(() => setError(null), 5000);
