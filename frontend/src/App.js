@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import CourseCard from './components/CourseCard';
 import Header from './components/Header';
@@ -16,7 +16,7 @@ function App() {
   const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
   // Fetch all courses
-  const fetchCourses = async () => {
+  const fetchCourses = useCallback(async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/courses`);
       if (!response.ok) {
@@ -28,10 +28,10 @@ function App() {
       setError('Failed to load courses. Please try again later.');
       console.error('Error fetching courses:', err);
     }
-  };
+  }, [API_BASE_URL]);
 
   // Fetch user enrollments
-  const fetchEnrollments = async () => {
+  const fetchEnrollments = useCallback(async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/enrollments/me`);
       if (!response.ok) {
@@ -42,7 +42,7 @@ function App() {
     } catch (err) {
       console.error('Error fetching enrollments:', err);
     }
-  };
+  }, [API_BASE_URL]);
 
   // Enroll in a course
   const enrollInCourse = async (courseId) => {
